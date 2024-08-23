@@ -5,35 +5,74 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+body,
+html {
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
-.d-flex{
-    display: flex;
+p {
+  margin: 0px;
 }
-.align-items-center{
-    align-items: center;
+.d-flex {
+  display: flex;
 }
-.gap-2{
-    gap: 0.5rem;
+.flex-column {
+  flex-direction: column;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 0.3rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 1rem;
+}
+.border-0 {
+  border: 0px;
+}
+.bg-transparent {
+  background: transparent;
+}
+.p-0 {
+  padding: 0px;
+}
+
 nav {
   height: 64px;
   background: #672467;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-nav .nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-}
-nav .inner-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+
+nav .slider-container {
+ width: 100%;
+ margin: 0px auto;
 }
 nav .star-icons {
   display: flex;
@@ -61,26 +100,30 @@ nav .star-icon {
 main {
   padding: 30px 0px;
 }
-main .container {
-  width: 1200px;
-  margin: 0px auto;
+.container {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .row {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 5rem;
 }
+
 .col {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex: 1 0 0%;
 }
-main .bread-crumbs {
+
+.bread-crumbs {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-main .bread-crumbs a {
+.bread-crumbs a {
   display: flex;
   gap: 20px;
   font-family: "Neuzeit Grotesk";
@@ -90,100 +133,50 @@ main .bread-crumbs a {
   text-align: left;
   color: #001c7266;
 }
-main .bread-crumbs a.active {
+.bread-crumbs a.active {
   color: #672467;
   font-size: 700;
 }
-main .banner {
+.banner {
   width: 100%;
 }
-main .subscribe-section{
-    background-color: #fff;
+.card {
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-}
-.input-container{
-    display: flex;
-    justify-content: space-between;
-}
-main .subscribe-section .subscribe{
-    font-family: "Neuzeit Grotesk";
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 16px;
-    text-align: left;
-    color: #672467;
-    margin: 0px;
-    line-height: 30px;
+  background: #ffffff01;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 0px 24px 0px #00000029;
 }
 
-.off{
-    font-family: "Utopia Std";
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-    color: #672467;
-    margin: 0px;
+.radio-lg {
+  margin: 0px;
+  width: 28px;
+  height: 28px;
 }
-.price{
-    font-family: "Neuzeit Grotesk";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: right;
-    color: #672467;
-    margin: 0px;
+.purchase-option .text-md {
+  font-family: "Neuzeit Grotesk";
+  font-size: 20px;
+  font-weight: 700;
+  color: #672467;
 }
-.off-price{
-    font-family: "Neuzeit Grotesk";
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: right;
-    color: #185C01;
-    margin: 0px;
+.purchase-option .text-md-2 {
+  font-family: "Neuzeit Grotesk";
+  font-size: 20px;
+  font-weight: 700;
+  color: #185c01;
 }
-.purchase-option {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+.purchase-option .text-sm {
+  font-family: "Neuzeit Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  color: #672467;
 }
-
-.purchase-option-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.purchase-option-label input {
-  margin-right: 15px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.purchase-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.option-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #6c2a82;
-  margin: 0;
-}
-
-.option-subtitle {
-  font-size: 14px;
-  color: #af7bae;
-  margin: 0;
+.purchase-option .text-sm-italic {
+  font-family: "Utopia Std";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  color: #672467;
 }
 
 .price {
@@ -192,8 +185,6 @@ main .subscribe-section .subscribe{
   color: #6c2a82;
   margin: 0;
 }
-
-
 
 .payment-logos {
   display: flex;
@@ -224,13 +215,6 @@ main .subscribe-section .subscribe{
 .secure-text {
   color: #6c2a82;
   font-weight: bold;
-}
-
-.delivery-section {
-  padding: 15px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .delivery-info {
@@ -289,4 +273,46 @@ main .subscribe-section .subscribe{
   margin: 0;
   font-size: 14px;
   color: #555;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  nav .slider-container {
+    width: 70%;
+   }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  nav .slider-container {
+    width: 70%;
+   }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  nav .slider-container {
+    width: 60%;
+   }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  nav .slider-container {
+    width: 50%;
+   }
 }
