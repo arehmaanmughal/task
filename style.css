@@ -1,0 +1,292 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.gap-2{
+    gap: 0.5rem;
+}
+nav {
+  height: 64px;
+  background: #672467;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+nav .inner-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav .star-icons {
+  display: flex;
+  gap: 5px;
+}
+nav .text-sm {
+  font-family: "Neuzeit Grotesk";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0px;
+}
+nav .btn-arrow {
+  color: #6677aa;
+  background: transparent;
+  border: 0px;
+  padding: 0px;
+}
+nav .star-icon {
+  color: gold;
+  font-size: 20px;
+}
+main {
+  padding: 30px 0px;
+}
+main .container {
+  width: 1200px;
+  margin: 0px auto;
+}
+.row {
+  display: flex;
+  gap: 30px;
+}
+.col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .bread-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .bread-crumbs a {
+  display: flex;
+  gap: 20px;
+  font-family: "Neuzeit Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: left;
+  color: #001c7266;
+}
+main .bread-crumbs a.active {
+  color: #672467;
+  font-size: 700;
+}
+main .banner {
+  width: 100%;
+}
+main .subscribe-section{
+    background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+main .subscribe-section .subscribe{
+    font-family: "Neuzeit Grotesk";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: #672467;
+    margin: 0px;
+    line-height: 30px;
+}
+
+.off{
+    font-family: "Utopia Std";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #672467;
+    margin: 0px;
+}
+.price{
+    font-family: "Neuzeit Grotesk";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+    color: #672467;
+    margin: 0px;
+}
+.off-price{
+    font-family: "Neuzeit Grotesk";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: right;
+    color: #185C01;
+    margin: 0px;
+}
+.purchase-option {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.purchase-option-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.purchase-option-label input {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.purchase-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.option-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6c2a82;
+  margin: 0;
+}
+
+.option-subtitle {
+  font-size: 14px;
+  color: #af7bae;
+  margin: 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6c2a82;
+  margin: 0;
+}
+
+
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.payment-logos img {
+  max-height: 35px;
+}
+
+.secure-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #6c2a82;
+}
+
+.lock-icon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #6c2a82;
+}
+
+.secure-text {
+  color: #6c2a82;
+  font-weight: bold;
+}
+
+.delivery-section {
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-info {
+  color: #43a047;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.collapsible-section {
+  margin-bottom: 15px;
+}
+
+.collapsible {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: 0px;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+  background-color: #f9f9f9;
+}
+
+.collapsible:after {
+  content: "\25BC";
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.collapsible.active:after {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0 15px;
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  border-left: 2px solid #6200ee;
+}
+
+.content p {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
